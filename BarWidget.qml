@@ -45,7 +45,9 @@ BarWidget {
     Text {
       id: glyph
       anchors.verticalCenter: parent.verticalCenter
-      text: "💬"
+      // A Nerd Font glyph (md-message-text), not the 💬 emoji: colour emoji
+      // ignore `color`, so the emoji never followed the theme.
+      text: "󰍩"
       textFormat: Text.PlainText
       color: root.bar ? root.bar.barForeground : Commons.Color.foreground
       font.family: root.bar ? root.bar.fontFamily : Style.font.family
